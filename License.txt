@@ -1,0 +1,90 @@
+# MIT License with Commercial Use Clause
+
+Copyright (c) 2025 Nicolas Landajo — Preview_Video_Monitor and Preview_Video_Monitor_Pro
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+1. The above copyright notice and this permission notice shall be included in all
+   copies or substantial portions of the Software.
+
+2. If you modify, extend, or create derivative works based on this Software,
+   you must include attribution to the original repository in your documentation
+   and/or attribution materials.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## Additional Terms
+
+### Commercial Use
+This software may be used for commercial purposes including but not limited to:
+- Personal or hobby projects  
+- Freelance work  
+- Studio or production pipelines  
+- Enterprise deployment  
+- Integration into commercial products  
+
+---
+
+### No Warranty and Liability Disclaimer
+THE AUTHOR(S) PROVIDE THIS SOFTWARE "AS IS" WITHOUT ANY WARRANTIES OR GUARANTEES
+OF ANY KIND. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE SOFTWARE
+IS WITH YOU. SHOULD THE SOFTWARE PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL
+NECESSARY SERVICING, REPAIR, OR CORRECTION.
+
+IN NO EVENT, UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING, WILL THE
+AUTHOR(S) BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL,
+INCIDENTAL, OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE
+THE SOFTWARE (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING RENDERED
+INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE OF THE
+SOFTWARE TO OPERATE WITH ANY OTHER SOFTWARE), EVEN IF THE AUTHOR(S) HAS BEEN
+ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+---
+
+### Good Faith Usage
+This software is provided in good faith and intended to be used in the same
+spirit. Users are expected to exercise reasonable care and judgment when
+implementing this tool in their workflows or production systems.
+
+---
+
+### Attribution Requirement
+If you modify this software or create derivative works, you must include
+attribution to the original repository in your documentation, credits, or
+attribution materials. Example attribution:
+
+> Based on **Preview Video Monitor Pro** by Nicolas Landajo  
+> https://github.com/NicLandajo/comfyui-preview-video-monitor
+
+---
+
+## Summary
+
+You are free to:
+- Use this software commercially ✅  
+- Modify and adapt the code ✅  
+- Distribute your modified versions ✅  
+- Use it in hobby, freelance, or studio projects ✅  
+
+You must:
+- Include the original copyright notice ✅  
+- Attribute the original source if you modify it ✅  
+- Understand there is no warranty or liability ✅  
+
+You cannot:
+- Hold the author liable for any damages ❌  
+- Remove the original copyright notice ❌  
+- Claim you wrote the original software ❌  

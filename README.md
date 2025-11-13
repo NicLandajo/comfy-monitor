@@ -8,7 +8,7 @@
 
 📰 NEWS📰
 
-🖥️ Preview Video Monitor Pro — Version 2.0 will be out around November 14th/15th
+🖥️ Preview Video Monitor Pro 🖥️ — Version 2.0 is out!!
 
 🚀 Major Update — Real-Time RAM-Cached Playback
 
@@ -60,5 +60,5 @@ PLEASE READ THE LICENSE FILE
 
 #
 
-Please not that at the moment this tool developed and tested over ComfyUI Desktop only, not Portable one. But it should work the same if you want to try it. I will go over testing on Portable soom.
+Please note that at the moment this tool is developed and tested over ComfyUI Desktop only, not Portable one. But it should work fine if you want to try it. I will go over testing on Portable soon.
 

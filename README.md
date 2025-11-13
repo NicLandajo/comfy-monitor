@@ -6,6 +6,16 @@
 
 #
 
+📰 NEWS📰
+
+🖥️🖥️PreviewVideoMonitorPro V2.0🖥️🖥️ will be out around November 14th/15th
+
+It will have smooth video playback bt caching it into RAM.
+Also a big smoothness killer war that the video was converted to 32bit float and that was killing the hardware bus data transport
+The video is now previewed at 8bit, enough to preview images and videos in comfy before exporting.
+
+#
+
 ☕︎ Support: A small donation helps! ☕︎ https://buymeacoffee.com/nicolaslandajo
 
 ⭐ Star this repository — it’s quick, free, and helps others discover the project

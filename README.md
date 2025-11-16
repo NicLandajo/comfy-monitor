@@ -10,6 +10,8 @@
 
 🖥️Preview Video Monitor Pro v3.2🖥️ introduces a cleaner, faster, and more precise workflow by removing all JavaScript and autoprompt logic for a fully backend-driven, zero-overhead design, moving workflow_fps to the top of the UI for quicker setup, and upgrading preview_fps into a flexible STRING input that supports both “smart” auto-FPS detection and exact custom framerates like 24, 29.97, or 60. Combined with the existing RAM-cached playback engine, pre-scaled frames, 8-bit optimized surfaces, and smart global caching, v3.2 delivers a smooth, professional, animation-accurate preview experience with simpler controls, greater precision, and the same rock-solid performance as before.
 
+Note: The autoprompt was removed from all the controls so the user don´t experience unwanted runs on the workflow.
+
 #
 
 ☕︎ Support: A small donation helps! ☕︎ https://buymeacoffee.com/nicolaslandajo

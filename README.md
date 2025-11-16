@@ -6,7 +6,7 @@
 
 #
 
-VIDEO TUTORIAL SOON....
+WATCH THE TUTORIAL: https://www.youtube.com/watch?v=q6JLcth2LnY
 
 #
 

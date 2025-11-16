@@ -12,7 +12,30 @@ WATCH THE TUTORIAL: https://www.youtube.com/watch?v=q6JLcth2LnY
 
 📰 NEWS📰
 
-🖥️Preview Video Monitor Pro v3.2🖥️ introduces a cleaner, faster, and more precise workflow by removing all JavaScript and autoprompt logic for a fully backend-driven, zero-overhead design, moving workflow_fps to the top of the UI for quicker setup, and upgrading preview_fps into a flexible STRING input that supports both “smart” auto-FPS detection and exact custom framerates like 24, 29.97, or 60. Combined with the existing RAM-cached playback engine, pre-scaled frames, 8-bit optimized surfaces, and smart global caching, v3.2 delivers a smooth, professional, animation-accurate preview experience with simpler controls, greater precision, and the same rock-solid performance as before.
+🚀 Preview Video Monitor Pro v3.2 — Faster, Cleaner, and More Precise Than Ever
+
+Preview Video Monitor Pro v3.2 brings a smoother, more intuitive experience designed directly for artists, animators, and editors who need reliable, accurate previews every time.
+
+✨ What’s New
+
+🎚️ workflow_fps Moved to the Top
+Your main timing control is now the first setting you see — making setup quicker and more natural.
+
+🎞️ Improved preview_fps Control
+preview_fps now accepts both:
+
+Smart automatic detection when you want the tool to choose the best framerate, or
+Exact custom values like 24, 29.97, 48, or 60 when you need perfect animation timing.
+
+⚡ Smoother Playback, Same Rock-Solid Performance
+
+v3.2 builds on the fast, stable playback you already know:
+
+Frames load instantly thanks to optimized caching
+
+Previews feel snappy and lightweight
+
+Timing accuracy is better than ever
 
 #
 

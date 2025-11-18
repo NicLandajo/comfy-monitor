@@ -36,9 +36,6 @@ Frames load instantly thanks to optimized caching
 
 Previews feel snappy and lightweight
 
-Timing accuracy is better than ever
-
-
 📁🚂 Preview Video Monitor Pro automatically creates two folders inside /custom_nodes/PreviewVideoMonitorPro/
 
 /cache/: stores temporary optimized video files and pre-scaled frames

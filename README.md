@@ -23,10 +23,9 @@ Preview Video Monitor Pro v3.3 brings a smoother, more intuitive experience with
 🎚️ workflow_fps Moved to the Top
 Your main timing control is now the first setting you see — making setup quicker and more natural.
 
-🎞️ Improved preview_fps Control
-preview_fps now accepts both:
+🎞️ Improved preview_fps Control now accepts both
 
-Smart automatic detection when you want the tool to choose the best framerate, or
+"Smart" automatic detection when you want the tool to choose the best framerate, or
 Exact custom values like 24, 29.97, 48, or 60 when you need perfect animation timing.
 
 ⚡ Smoother Playback, Same Rock-Solid Performance

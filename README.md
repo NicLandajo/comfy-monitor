@@ -22,7 +22,7 @@
 
 #
 
-🎬 Perfect Playback Control - Intuitive timeline scrubbing, frame-by-frame stepping, and multiple playback modes (Forward, Backward, Ping-Pong right in the viewer!!!)
+🎬 Perfect Playback Control - Intuitive timeline scrubbing, frame-by-frame stepping and play/stop with keyboard arrows and spacebar, and multiple playback modes (Forward, Backward, Ping-Pong right in the viewer!!!)
 
 🎮 CONTROLS HAVE MOVED! - From Static Node Settings to Dynamic Interactive Monitor - Click, Drag, Zoom & Control Everything in Real-Time!
 

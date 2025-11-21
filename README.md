@@ -10,11 +10,11 @@
 #
 
 <img width="1920" height="982" alt="node V5" src="https://github.com/user-attachments/assets/6c297d19-d90d-4bef-a8b6-3d8965062053" />
-
 #
+
 <img width="615" height="105" alt="buttons V5" src="https://github.com/user-attachments/assets/1ec58dac-7d53-4a24-93e6-f43e2f16531e" />
-
 #
+
 <img width="619" height="101" alt="counter V5" src="https://github.com/user-attachments/assets/4cee683c-57b3-4809-a2b4-12bf996c9e48" />
 #
 

@@ -13,7 +13,9 @@
 <img width="619" height="101" alt="counter V5" src="https://github.com/user-attachments/assets/4cee683c-57b3-4809-a2b4-12bf996c9e48" />
 
 
-🎬 Perfect Playback Control - Intuitive timeline scrubbing, frame-by-frame stepping, and multiple playback modes (Forward, Backward, Ping-Pong right in the viewer)
+🎬 Perfect Playback Control - Intuitive timeline scrubbing, frame-by-frame stepping, and multiple playback modes (Forward, Backward, Ping-Pong right in the viewer!!!)
+
+🎮 CONTROLS HAVE MOVED! - From Static Node Settings to Dynamic Interactive Monitor - Click, Drag, Zoom & Control Everything in Real-Time!
 
 🖱️ Smart Interactive Controls - Zoom with mouse wheel, pan with right-click drag, and instant fit modes (Fit, Width, Height, 1:1)
 

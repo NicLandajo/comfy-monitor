@@ -30,7 +30,7 @@ From the simple previews of v3.3 to the professional-grade video workstation of 
 
 #
 
-PreviewVideoMonitor v3.3
+PreviewVideoMonitor v3.3 (no interactive monitor/viewer)
 
 #
 

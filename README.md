@@ -6,19 +6,9 @@
 
 🔥NEWS🔥 V5.0 -  Preview Experience soon!
 
-<img width="1920" height="1080" alt="monitor V5" src="https://github.com/user-attachments/assets/64d729a6-4fc6-439a-8cda-4191d9509d59" />
+<img width="1920" height="1080" alt="pvm_5 2_02" src="https://github.com/user-attachments/assets/a19db8e6-fa99-4749-97bd-f7bccb262a25" />
 
-#
-
-<img width="1920" height="982" alt="node V5" src="https://github.com/user-attachments/assets/6c297d19-d90d-4bef-a8b6-3d8965062053" />
-
-#
-
-<img width="615" height="105" alt="buttons V5" src="https://github.com/user-attachments/assets/1ec58dac-7d53-4a24-93e6-f43e2f16531e" />
-
-#
-
-<img width="619" height="101" alt="counter V5" src="https://github.com/user-attachments/assets/4cee683c-57b3-4809-a2b4-12bf996c9e48" />
+<img width="1919" height="984" alt="pvm_5 2_01" src="https://github.com/user-attachments/assets/5383fdac-e9c9-433c-93d3-c62256f293f2" />
 
 #
 

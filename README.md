@@ -94,6 +94,10 @@ Both folders are safe, automatic, and self-maintaining.
 
 #
 
+🐍 Special Thanks to PyGame 🐍 Preview Image Monitor relies on the powerful Pygame library to handle cross-platform window creation, display management, and image rendering. We extend our sincere thanks to the Pygame developers and contributors for their invaluable work. https://github.com/pygame
+
+#
+
 PLEASE READ THE LICENSE FILE
 
 #

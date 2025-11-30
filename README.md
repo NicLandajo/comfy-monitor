@@ -74,15 +74,20 @@ Instant Fit Modes - Click buttons or use number keys 12345 for instant view adju
 
 Live Visual Feedback - Buttons light up with color-coded active states
 
-🧠 Smart Generation Management
+🧠 Smart Persistent Generation Vault
 
-Session-Based Storage - Store unlimited generations during your creative workflow
+Cross-Session Preservation - Your creative generations survive ComfyUI restarts and system reboots
 
-Instant Version Cycling - Dropup menu with keyboard navigation (↑ ↓ ENTER) through all versions
+Unlimited Version History - Store every iteration of your work without worrying about limits during sessions
 
-Visual Generation Browser - Hover and click to load any previous generation instantly
+Instant Time Travel - Dropup menu with keyboard navigation (↑ ↓ ENTER) to revisit any point in your creative journey
+note: future versions might save a jason file per generation in case you need to recostruct a look, maybe saving a png frame
 
-Automatic Cleanup - Configurable limits with smart oldest-first removal
+Visual Generation Gallery - Hover and click to instantly resurrect any previous creation
+
+Smart Memory Management - Configurable archive limits with intelligent oldest-first curation
+
+Your Creative Legacy - Everything persists until you consciously choose to clear the cache
 
 ⚡ Performance Engine
 

@@ -81,7 +81,7 @@ Cross-Session Preservation - Your creative generations survive ComfyUI restarts 
 Unlimited Version History - Store every iteration of your work without worrying about limits during sessions
 
 Instant Time Travel - Dropup menu with keyboard navigation (↑ ↓ ENTER) to revisit any point in your creative journey
-note: future versions might save a jason file per generation in case you need to recostruct a look, maybe saving a png frame
+note: future versions might save a json or png from the video file per generation in case you need to recostruct a previous look
 
 Visual Generation Gallery - Hover and click to instantly resurrect any previous creation
 

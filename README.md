@@ -1,4 +1,5 @@
-<img width="2048" height="700" alt="Banner_github" src="https://github.com/user-attachments/assets/d8819d6a-d98a-4370-9d45-0bf1e6ddd8fb" />
+<img width="1536" height="672" alt="wide macros style_01" src="https://github.com/user-attachments/assets/2f2a77e8-1866-41f4-a8f7-2880464a3e58" />
+
 
 <div align="center">
 
@@ -16,9 +17,6 @@ Lets you select one of up to six secondary monitors to display generations insta
 ### MAJOR UPDATE COMING SOON! 🚀
 
 </div>
-
-#
-<img width="1337" height="582" alt="long_banner_01" src="https://github.com/user-attachments/assets/5f922e67-c558-4225-803a-ee58e72f628e" />
 
 #
 <img width="1920" height="1080" alt="interface_01" src="https://github.com/user-attachments/assets/2556b4b1-e60f-462e-a4a6-425ef9234307" />

@@ -208,7 +208,8 @@ Both folders are safe, automatic, and self-maintaining.
 
 #
 
-☕︎ Support: A small donation helps! ☕︎ https://buymeacoffee.com/nicolaslandajo
+☕︎ HEY!!!👋 Support!!: Just $1 can make a real difference. Your support helps me continue pouring countless hours into this project I love! ☕︎
+☕︎ https://buymeacoffee.com/nicolaslandajo ☕︎
 
 ⭐ Star this repository — it’s quick, free, and helps others discover the project
 

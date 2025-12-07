@@ -24,6 +24,8 @@ Lets you select one of up to six secondary monitors to display generations insta
 #
 <img width="1920" height="1080" alt="003" src="https://github.com/user-attachments/assets/dca8fbe3-ba97-48b3-bbfd-6b8657ad10e2" />
 
+In/Out Marking System. Set Range Instantly - Press I for IN point, O for OUT point at current frame, reset with P; or use the "In" - "Reset" - "Out" red circles
+
 #
 <img width="1920" height="1080" alt="002" src="https://github.com/user-attachments/assets/00be4ec5-ab4b-4fea-981a-234ebe9bb10d" />
 

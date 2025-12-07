@@ -111,6 +111,11 @@ Color-Coded Interface - Intuitive button states with meaningful color schemes
 
 Professional Timeline - Extended scrubbing area for easy frame selection
 
+🦜 Physical Display Gamut Video Selection
+
+Direct support for sRGB (default) • sRGB ↔ Linear • Adobe RGB • DCI-P3 • Rec. 2020 • Rec.709
+Rec.709 ↔ Linear • PQ (ST2084) → sRGB (HDR tone-mapping) • HLG → sRGB (HDR tone-mapping)
+
 🔄 Universal Compatibility
 
 Multi-Format Support - Videos, image sequences, tensors, and all ComfyUI video formats

@@ -208,7 +208,7 @@ Both folders are safe, automatic, and self-maintaining.
 
 #
 
-☕︎ HEY!!!👋 Support!!: Just $1 can make a real difference. Your support helps me continue pouring countless hours into this project I love! ☕︎
+☕︎ HEY!!!👋 Please support, just $1 can make a real difference ☕︎
 
 ☕︎ https://buymeacoffee.com/nicolaslandajo ☕︎
 

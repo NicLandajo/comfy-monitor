@@ -39,7 +39,7 @@ Physical Display Gamut Video Selection
 #
 <img width="1920" height="1080" alt="005" src="https://github.com/user-attachments/assets/fec4bbfd-ab30-4471-9aba-4a036a2030d7" />
 
-Clear your cache comfirmation button. Explore the dir.
+Clear your cache confirmation button. Explore the dir.
 
 #
 <img width="1920" height="1080" alt="006" src="https://github.com/user-attachments/assets/1c4079cb-8fec-477a-b4a1-0acd8cda5d0d" />

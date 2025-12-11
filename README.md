@@ -60,8 +60,11 @@ The Node
 
 #
 
-FEATURES
-#
+<div align="center">
+
+# FEATURES
+
+</div>
 
 -🎬 Professional Playback Control Suite
 

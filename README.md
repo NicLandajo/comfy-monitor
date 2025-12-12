@@ -203,7 +203,7 @@ This internal storage may be cleared or changed between sessions or updates, so 
 
 Future Improvement
 In upcoming versions, you will be able to set a custom storage location for all session-generated data, giving you full control over where files are kept.
-Bottom line: Use PVMP as a Monitoring/Viewer systemfor fast, powerful previews and creative experimentation — but always save your important work properly using dedicated Save nodes.
+Bottom line: Use PVMP as a Monitoring/Viewer system for fast, powerful previews and creative experimentation — but always save your important work properly using dedicated Save nodes.
 
 #
 <div align="center">

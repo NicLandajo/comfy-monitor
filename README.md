@@ -1,4 +1,4 @@
-<img width="1536" height="672" alt="wide macros style_01" src="https://github.com/user-attachments/assets/2f2a77e8-1866-41f4-a8f7-2880464a3e58" />
+<img width="1340" height="619" alt="ComfyMonitor5 - banner" src="https://github.com/user-attachments/assets/882cb77f-23d0-4a18-a506-171e7359e121" />
 
 
 <div align="center">
@@ -14,7 +14,7 @@ Lets you select one of up to six secondary monitors to display generations insta
 # 🔥 NEWS 🔥
 
 ### V5.0 - NEW PREVIEW EXPERIENCE
-### 🐱‍💻 MAJOR UPDATE COMING SOON AROUND THE NEW YEAR 2026! 🚀
+### 🐱‍💻 MAJOR UPDATE COMING SOON! 🚀
 
 </div>
 

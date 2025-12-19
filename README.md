@@ -50,8 +50,6 @@ Share the PNG or open it later in comfy and continue working from there. The Sna
 Explore the dir and grab your history work and continue creating.
 
 #
-
-#
 <img width="1920" height="1080" alt="009" src="https://github.com/user-attachments/assets/45f861d6-9a68-40f2-8753-0b1d376ca2d5" />
 
 Wipe/Compare/A/B - You can wipe/compare the current generation on screen against any other gen in the Generations dropup menu.

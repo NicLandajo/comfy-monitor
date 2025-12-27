@@ -69,7 +69,7 @@ Explore the dir and grab your history work and continue creating.
 #
 <img width="1920" height="1080" alt="05_vision_a" src="https://github.com/user-attachments/assets/e5b6e1f3-ba7a-4665-b1d3-45ba8e0bb977" />
 
-VISION module with all the controls you need for inspection and visualization
+VISION module with all the controls you need for inspection and visualization. The first thing you see are the Gain, Gamma snd Saturation sliders; and then the buttons on the right.
 
 #
 <img width="1920" height="1080" alt="05_vision_b" src="https://github.com/user-attachments/assets/2d459b4d-eea8-408d-9802-1ad5300d063b" />

@@ -14,6 +14,7 @@ Lets you select one of up to six secondary monitors to display generations insta
 
 ### V5.0 - NEW PREVIEW EXPERIENCE
 ### 🖥️🖥️🖥️🖥️🚀 RELEASE JANUARY 5 2026 🚀🖥️🖥️🖥️🖥️
+### See the demo: https://www.youtube.com/watch?v=1574Y_pF5Ec
 
 </div>
 

@@ -252,42 +252,6 @@ This internal storage may be cleared by users (or accidentally by you) or change
 
 #
 
-Please read the install instructions.
-
-#
-
-🚀 Preview Video Monitor Pro v3.3 — Faster, Cleaner, and More Precise Than Ever
-
-Preview Video Monitor Pro v3.3 brings a smoother, more intuitive experience with accurate previews.
-
-✨ What’s New
-
-🎚️ workflow_fps Moved to the Top
-Your main timing control is now the first setting you see — making setup quicker and more natural.
-
-🎞️ Improved preview_fps Control now accepts both
-
-"Smart" automatic detection when you want the tool to choose the best framerate, or
-Exact custom values like 24, 29.97, 48, or 60 when you need exact animation timing.
-
-⚡ Smoother Playback, Same Rock-Solid Performance
-
-v3.3 builds on the fast, stable playback you already know:
-
-Frames load instantly thanks to optimized caching
-
-Previews feel snappy and lightweight
-
-📁🚂 Preview Video Monitor Pro automatically creates two folders inside /custom_nodes/PreviewVideoMonitorPro/
-
-/cache/: stores temporary optimized video files and pre-scaled frames
-
-/__pycache__/: standard Python bytecode compiled at runtime
-
-Both folders are safe, automatic, and self-maintaining.
-
-#
-
 ☕︎ HEY!!!👋 Please support, just $1 can make a real difference ☕︎
 
 ☕︎ https://buymeacoffee.com/nicolaslandajo ☕︎

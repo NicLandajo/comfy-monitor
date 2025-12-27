@@ -234,8 +234,9 @@ PreviewVideoMonitor can save files to disk, its internal session data and cached
 custom_nodes/PreviewVideoMonitorPro/, but you can change this to your own custom working directory directly from the node, super easy, and giving you full control over where files are kept.
 This internal storage may be cleared by users (or accidentally by you) or changed between sessions or updates, so do not rely on it for keeping your work 100% safe.
 
-#
-PreviewVideoMonitor V3.3🖥️🖥️ is now deprecated.
+# Previous versions
+
+PreviewVideoMonitor V3.3 - deprecated
 
 #
 

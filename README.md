@@ -87,9 +87,9 @@ The Node
 
 #
 
-- 🏭 Working for future versions: We´ll work on a more advance, fast and less consuming RAM and GPU engine.
+- 🏭 Future versions: We´ll work on a more advance, fast and less consuming RAM and GPU engine.
   
-  Note: If PVM consumes more resources than you are willing to accept, consider waiting for future versions.
+  Note: If PVM consumes more resources than you are willing to accept, consider waiting for future updates on V5.
   
 - 🕰️ Long term development for version V6 is a 3D system in the monitor to visualize 3D geometry and gaussian splats
 

@@ -28,30 +28,21 @@ Connect either:
 - Image sequences data to the `images` input (vae decode)
 - Image (single) to the `images` input (vae decode or a load image node)
 
-**Choose Your Monitor**
-The `monitor` parameter lets you select which screen displays the viewer (useful for multi-monitor setups)
+**source**
+Selects the input type: video or images. Use video when connecting a VIDEO output, or images when connecting an IMAGE sequence or single image.
 
-**Power On**
-Set `power_state` to ON (true). Turn it Off to switch to another physical monitor and then back to On. That´s actually the only reason for this button.
+**monitor**
+The `monitor` parameter lets you select which physical screen displays the PVM viewer
 
+**power_state**
+Set `power_state` to ON (true). Turn it Off to switch to another physical monitor and then back to On.
 
-**Source**
-Selects the input type: video or images. Use video when connecting a VIDEO output, or images when connecting an IMAGE sequence.
+**target_resolution**
+Sets the internal processing resolution for the selected `monitor`: 1920x1080 or 3840x2160 denpending on your physical monitor resolution, GPU video card and graphics settings.
 
-**Monitor**
-Selects which display to open the preview window on. The dropdown lists all detected monitors on your system.
-
-**Power State**
-On/Off toggle for the preview window. When Off, the node passes through the input without opening the monitor.
-You also need it to change physical monitors from the "Monitor" field above. Turn Off, change monitor and turn On again.
-
-**Target Resolution**
-Sets the internal processing resolution: 1920x1080 or 3840x2160. This affects the resolution used for frame caching and display. Choose based on your source material and performance needs.
-note: PVM was tested and developed under 1920x1080 screen, 3840x2160 is not tested nor any other physical resolution.
-
-**Generations Name**
-A custom label prefix for saved generations (e.g., "Generation", "Test", "Final"). This name appears in the Generations dropdown and is used when naming cached files.
-Useful if you´ll be creating a lot of iterations and you need a base name for all gens or a "project name", etc. This can be changed later at any point on the Generations dropup.
+**generations_name**
+A custom label prefix for saved generations (e.g., "Generation", "the project name", "Test", "Final"). This name appears in the Generations dropup and is used when naming cached files.
+Useful if you´ll be creating a lot of iterations and you need a base name for all gens or a "project name" prefix, etc. This can be changed later at any point on the Generations dropup.
 
 **Snapshot Workflow**
 When enabled, saving a snapshot will also embed the workflow JSON that generated it. This lets you recover the exact workflow settings later.
@@ -59,14 +50,11 @@ When enabled, saving a snapshot will also embed the workflow JSON that generated
 **Snapshot Path**
 Where snapshots are saved. Use smart for the default location (snapshots/ inside the node´s folder in custom_nodes), or enter a custom directory path.
 
-**Inputs:**
 
-images: Connect an IMAGE sequence or single images here when source is set to images
-video: Connect a VIDEO output here when source is set to video
+**video Output**
 
-**Output:**
-
-video — Passes through the input video, allowing the node to be chained with other video nodes
+At the moment, we need this output for technical reasons.
+Passes through the input video, allowing the node to be chained with other video nodes. Not tested and would be a rare use for this node. Not recommended at all.
 
 **Run Your Workflow**
 Queue your prompt. You'll see a waiting screen. The monitor window opens automatically on your selected display.

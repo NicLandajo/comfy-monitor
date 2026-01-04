@@ -290,7 +290,21 @@ Instantly see if your video has color casts, clipping, or unusual color distribu
 
 ---
 
-### Diagnostic Sliders
+### Waveform RGB
+
+Displays brightness levels for each color channel (Red, Green, Blue) in three stacked sections. The horizontal axis matches your frame left-to-right - pixels on the left of your video appear on the left of the scope. The vertical axis shows brightness: bright values at the top, dark values at the bottom. Use it to see WHERE in your frame brightness issues occur (unlike the Histogram which only shows how much). If values hit the very top or bottom, you're clipping - losing detail in highlights or shadows. When all three channels align at similar heights, your image is color-balanced (neutral).
+
+---
+
+### Histogram
+
+Shows how many pixels exist at each brightness level (0-255) for Red, Green, and Blue channels overlaid together. The horizontal axis represents brightness - black/shadows on the left, white/highlights on the right. The height shows how many pixels have that value. Use it for a quick overall exposure check: a histogram bunched to the left means underexposed, bunched to the right means overexposed. Peaks hitting the edges indicate clipping. Unlike the Waveform, the Histogram doesn't show you where in the frame these values are - just how much of each exists.
+
+---
+
+### 3 Diagnostic Sliders
+
+Move them left and right by clicking the red arrows, reset them by middle mouse wheel clicking anywhere on the sliders.
 
 **Gain:**
 Lightens or darkens the image. Drag right to reveal shadow detail, left to check highlight clipping.
@@ -318,9 +332,73 @@ These controls help you evaluate generation quality—they don't produce an outp
 
 ---
 
+### Zebra Pattern - (Clipping Indicator)
+
+Overlays diagonal stripes on areas of your image that exceed a set brightness threshold. This is a real-time warning tool borrowed from broadcast cameras - the stripes themselves are not recorded, they just show you where detail is being lost to overexposure (clipping). When pixels hit maximum brightness (100%), they become pure white with no recoverable detail. Zebras let you see exactly WHERE in your frame this is happening, unlike the Histogram which only tells you that clipping exists somewhere. Use it to protect highlights before they blow out - if you see stripes on skin, clouds, or important details, reduce exposure until they disappear.
+
+---
+
+### Color Picker (P)
+A draggable sampling tool that reads pixel values directly from the original frame. When activated, a small red 5x5 crosshair appears that you can drag anywhere over your video. The picker samples the pixel under the crosshair and displays six values in an info panel:
+
+R G B — The Red, Green, and Blue channel values (0-255) of the sampled pixel, shown in their respective colors
+A (Alpha) — The transparency value. Displays "none" for standard RGB video frames that don't contain alpha channel data
+SAT — Saturation (0.00 to 1.00). Measures color intensity - 0.00 means pure grey (no color), 1.00 means fully saturated color. Calculated from the difference between the brightest and darkest RGB channels
+LUMA — Perceived brightness (0-255) using the Rec. 601 formula (0.299×R + 0.587×G + 0.114×B), which weights green highest because human eyes are most sensitive to green
+
+Use it to check exact color values at specific points in your frame - verify skin tones, check if shadows are truly black, or compare color values between different areas of your image.
+
+---
+
+### Guides
+
+Overlays four composition and broadcast-safe reference guides onto your video. All guides adapt to your video's aspect ratio, resolution, and any zoom/pan transformations. They can persist on screen after closing the Vision module.
+
+Rule of Thirds (White) — Divides the frame into a 3×3 grid. Place key elements along these lines or at their intersections for balanced, visually pleasing compositions.
+Action Safe (Green) — A rectangle with 5% margin from all edges (90% of frame). Important action should stay within this boundary to ensure nothing gets cut off on TVs that overscan the image.
+Title Safe (Blue) — A rectangle with 10% margin from all edges (80% of frame). Text and graphics must stay within this area to guarantee visibility on all displays, including older TVs with significant overscan.
+Center Cross (Red) — Marks the exact center of the frame. Useful for aligning subjects, checking symmetry, or positioning center-weighted elements.
+
+---
+
+### Masks
+
+Overlays black bars (letterbox or pillarbox) to preview how your video would look cropped to different aspect ratios. Left-click the M button to cycle through available formats. Middle-click the M button to reset back to OFF.
+The mask automatically adapts to your video - if the target ratio is wider than your footage, you get letterbox (horizontal bars top/bottom). If the target ratio is narrower, you get pillarbox (vertical bars left/right). Masks can persist on screen after closing the Vision module.
+Available Aspect Ratios:
+
+OFF — No mask (default)
+2.39:1 — Anamorphic widescreen (modern cinema scope)
+2.35:1 — Classic CinemaScope / Panavision
+2.00:1 — Univisium (Netflix preferred for some originals)
+1.85:1 — Theatrical flat widescreen (US cinema standard)
+16:9 — HDTV / standard widescreen video (1.78:1)
+3:2 — Classic 35mm still photography / some mirrorless video
+4:3 — Standard definition TV / vintage footage (1.33:1)
+1:1 — Square format (Instagram posts)
+9:16 — Vertical video (Stories, Reels, TikTok, Shorts)
+4:5 — Portrait format (Instagram portrait posts)
+
+---
+
+### Mirror
+
+Flips the image horizontally, vertically, or both. Left-click to cycle through four modes:
+
+Normal — No transformation (default)
+H-Flip — Horizontal mirror (left becomes right)
+V-Flip — Vertical mirror (top becomes bottom)
+Both — Flipped horizontally and vertically (180° rotation)
+
+Why mirror your image?
+Your brain adapts to what it sees. After staring at the same frame for a while, you stop noticing problems - asymmetries, balance issues, awkward compositions, or artifacts become invisible. Flipping the image tricks your brain into seeing it fresh, as if for the first time. Suddenly things that were hidden become obvious: a face looks lopsided, a horizon isn't level, or an artifact jumps out that you missed before.
+This is a classic technique used by artists, painters, and animators for centuries - they would look at their work in a mirror to catch mistakes. Digital mirror does the same thing for your video.
+
+---
+
 ## Chapter 4: Comparison Tools
 
-When you generate multiple versions, you need to compare them side-by-side. PreviewVideoMonitorPro gives you two professional comparison modes.
+When you generate multiple gen versions, you need to compare them side-by-side. PreviewVideoMonitorPro gives you two professional comparison modes.
 
 ### The Generations Dropup
 
@@ -331,7 +409,7 @@ Also navigate them with up and down arrow keys. Then press END key to display th
 - A comparison button (small square on the right)
 
 **Loading a Generation:**
-Press Enter to deploy generations menu or click the Generations button in the main bar. Click any generation name to load it into the viewer.
+Press Enter to deploy generations menu or click the Generations button in the main bar. Click any generation name to load it into the viewer or press END key.
 
 **Renaming:**
 While a generation is selected, press Enter again to rename, then press Enter again to confirm.
@@ -448,6 +526,9 @@ We use an advanced content detection system that prevents a Generation about to 
 
 ### The Clear Cache System
 
+Clear Gens - delete all generations (with confirmation "¿ClearForever?")
+Explore - open runs_cache folder in file explorer
+
 Click **ClearCache** button to open options:
 
 **"Clear All Cache" (Current Option)**
@@ -472,7 +553,7 @@ Manage your generations manually—delete old ones you don't need via the Genera
 **What Is Snapshot:**
 Captures your current ComfyUI workflow and saves it alongside your generation in a WebP file/image. Think of it as version control for your prompts and settings.
 If node it set to "smart" in "snapshot_path", snaps go to \custom_nodes\PreviewVideoMonitorPro\snapshots
-If node it set to "your custom path" in "snapshot_path", snaps go to that path
+If node it set to "your custom path" in "snapshot_path", snaps go to that custom path
 Type "smart" again and the node will automatically know you´re sending to \custom_nodes\PreviewVideoMonitorPro\snapshots
 
 **How It Works:**
@@ -481,7 +562,11 @@ Type "smart" again and the node will automatically know you´re sending to \cust
 3. Stored in `snapshots` folder
 
 **Snapshot Button:**
-Opens a menu to manage saved workflows
+Opens a menu to manage and save/capture workflows
+
+Take - manually take a snapshot
+Clear Snaps - delete all snapshots (with confirmation)
+Explore - open snapshots folder in file explorer
 
 ---
 

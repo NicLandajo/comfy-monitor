@@ -73,9 +73,9 @@ Queue your prompt. You'll see a waiting screen. The monitor window opens automat
 | `O` | Set OUT point |
 | `P` | Reset IN OUT Points |
 | `1` | Toggle 1:1 mode |
-| `2` | Width mode |
-| `3` | Height mode |
-| `4` | Fit mode |
+| `2` | Fit mode |
+| `3` | Width mode |
+| `4` | Height mode |
 | `5` | Toggle Fullscreen |
 | `R` | Toggle Red channel |
 | `G` | Toggle Green channel |
@@ -511,7 +511,7 @@ RAM usage! Just keep an eye on free RAM if you are working with hi-res video and
 - Decoded frames in memory
 - Used for instant playback
 - Cleared when you close monitor
-- 
+ 
 **Disk Cache (Slow, Persistent)**
 - JPEG sequences saved in `runs_cache` folder
 - Survives closing ComfyUI
@@ -720,6 +720,12 @@ GPU acceleration enabled: cv2_cuda=True, torch_cuda=True
 | 1080p | Negligible (PCIe overhead > benefit) |
 | 4K | ~10-20% faster |
 | 6K/8K | ~50-70% faster |
+
+---
+
+**Temp Workflow Folder (runs_cache/temp_workflow/)**
+
+This folder contains instance_## subfolders (e.g., instance_10, instance_48) that are created each time the node executes. Each instance is assigned a unique random number that will never conflict with existing folders, even across multiple ComfyUI sessions or browser tabs running simultaneously. These folders persist across sessions and store the workflow JSON used by the snapshot feature. They accumulate over time and can be safely deleted when ComfyUI is not running. Clearing this folder periodically is normal maintenance and won't affect your saved generations or snapshots.
 
 ---
 

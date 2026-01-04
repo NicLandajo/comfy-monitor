@@ -1,5 +1,5 @@
 # PreviewVideoMonitorPro User Manual
-**Version 5.2 | Professional Video Inspection for ComfyUI**
+**Version 5.2 | Professional Monitor and Video Inspection for ComfyUI**
 
 ---
 
@@ -15,7 +15,7 @@ This manual is designed for everyone: if you're new, follow the guided walkthrou
 
 ## Quick Start: Your First Session
 
-## We´ll be making a video tutorial soon. Check for that link on https://github.com/NicLandajo/comfyui-preview-video-monitor
+## We´ll be making a video tutorial soon. Check for that link on https://github.com/CrateTools/comfyui-preview-video-monitor
 
 ### Setting Up the Node
 
@@ -25,7 +25,7 @@ In ComfyUI search `PreviewVideoMonitorPro`
 **Connect Your Input**
 Connect either:
 - Video source (MP4, etc.) to the `video` input
-- Image batch to the `images` input (vae decode)
+- Image sequences data to the `images` input (vae decode)
 - Image (single) to the `images` input (vae decode or a load image node)
 
 **Choose Your Monitor**
@@ -34,10 +34,42 @@ The `monitor` parameter lets you select which screen displays the viewer (useful
 **Power On**
 Set `power_state` to ON (true). Turn it Off to switch to another physical monitor and then back to On. That´s actually the only reason for this button.
 
+
+**Source**
+Selects the input type: video or images. Use video when connecting a VIDEO output, or images when connecting an IMAGE sequence.
+
+**Monitor**
+Selects which display to open the preview window on. The dropdown lists all detected monitors on your system.
+
+**Power State**
+On/Off toggle for the preview window. When Off, the node passes through the input without opening the monitor.
+You also need it to change physical monitors from the "Monitor" field above. Turn Off, change monitor and turn On again.
+
+**Target Resolution**
+Sets the internal processing resolution: 1920x1080 or 3840x2160. This affects the resolution used for frame caching and display. Choose based on your source material and performance needs.
+note: PVM was tested and developed under 1920x1080 screen, 3840x2160 is not tested nor any other physical resolution.
+
+**Generations Name**
+A custom label prefix for saved generations (e.g., "Generation", "Test", "Final"). This name appears in the Generations dropdown and is used when naming cached files.
+Useful if you´ll be creating a lot of iterations and you need a base name for all gens or a "project name", etc. This can be changed later at any point on the Generations dropup.
+
+**Snapshot Workflow**
+When enabled, saving a snapshot will also embed the workflow JSON that generated it. This lets you recover the exact workflow settings later.
+
+**Snapshot Path**
+Where snapshots are saved. Use smart for the default location (snapshots/ inside the node´s folder in custom_nodes), or enter a custom directory path.
+
+**Inputs:**
+
+images: Connect an IMAGE sequence or single images here when source is set to images
+video: Connect a VIDEO output here when source is set to video
+
+**Output:**
+
+video — Passes through the input video, allowing the node to be chained with other video nodes
+
 **Run Your Workflow**
 Queue your prompt. You'll see a waiting screen. The monitor window opens automatically on your selected display.
-
-That's it! The monitor loads your generation and you're ready to inspect.
 
 ---
 
@@ -48,11 +80,10 @@ That's it! The monitor loads your generation and you're ready to inspect.
 | `SPACE` | Play/Pause |
 | `←` | Previous frame (hold for scrubbing) |
 | `→` | Next frame (hold for scrubbing) |
-| `HOME` | Jump to first frame |
-| `END` | Jump to last frame |
+| `END` | Display selected Generation |
 | `I` | Set IN point |
 | `O` | Set OUT point |
-| `P` | Toggle Pong mode |
+| `P` | Reset IN OUT Points |
 | `1` | Toggle 1:1 mode |
 | `2` | Width mode |
 | `3` | Height mode |
@@ -61,11 +92,11 @@ That's it! The monitor loads your generation and you're ready to inspect.
 | `R` | Toggle Red channel |
 | `G` | Toggle Green channel |
 | `B` | Toggle Blue channel |
-| `W` | Exit wipe/SBS mode |
-| `Shift+Q` | Close monitor window |
+| `W` | Enter and Exit wipe/SBS modes |
+| `Shift+Q` | Close monitor window and end it´s running process |
 | Mouse Wheel | Zoom in/out |
 | Right-Click + Drag | Pan (when zoomed) |
-| Middle-Click | Reset zoom/pan |
+| Middle-Click | Reset zoom |
 
 ---
 
@@ -85,8 +116,6 @@ A clean row of controls for everything you need:
 - Generations dropdown (manage multiple runs)
 - Snapshot (save workflows)
 - Clear Cache (manage storage)
-
-*Design Philosophy: Everything is one click away. No nested menus, no hunting for features.*
 
 ---
 
@@ -115,7 +144,7 @@ Click and drag anywhere on the timeline bar to jump instantly to any frame. The 
 Click it to open the FPS dropup menu:
 
 **FPS Presets:**
-Choose from professional frame rates:
+Choose fps preset - usual industry standards
 - 60, 59.94, 50, 48, 30, 29.97, 25, 24, 23.976, 15, 12, 8
 
 **Custom FPS (Yellow Box):**
@@ -126,7 +155,7 @@ Any video starts counting at 1, but sometimes you may want to change it to match
 
 Below the FPS field is a blue-outlined field. This sets what number your first frame displays as.
 
-*Example: If your video is frame 100-200 of a larger sequence, set this to 100 so the counter shows the correct frame numbers.*
+*Example: If a shot/video is frame 1001-1200 of a larger sequence, set this to 1001 so the counter shows the correct frame numbers.*
 
 ---
 
@@ -149,10 +178,12 @@ When markers are set:
 - Loops back to IN
 
 **Pong Mode:**
-Click Pong to enable ping-pong playback (plays forward, then backward, continuously between IN/OUT)
+Click Pong to enable ping-pong playback (plays forward, then backward, continuously between IN/OUT or the full range)
 
 **Toggle Markers Off:**
-Click IN while already at the IN point to disable markers.
+Press P
+or
+Click IN or OUT yellow and red circles
 
 ---
 
@@ -163,8 +194,6 @@ Click IN while already at the IN point to disable markers.
 | `SPACE` | Play/Pause |
 | `←` | Previous frame (hold for scrubbing) |
 | `→` | Next frame (hold for scrubbing) |
-| `HOME` | Jump to first frame |
-| `END` | Jump to last frame |
 
 ---
 
@@ -172,7 +201,7 @@ Click IN while already at the IN point to disable markers.
 
 ### Understanding FIT Modes
 
-Your video's resolution might not match your screen. FIT modes control how the video scales.
+Your video's resolution might not match your screen. FIT modes control how the video scales and positions.
 
 **The FIT Buttons:**
 `1:1` `Fit` `Width` `Height` `Fullscreen` `Reset`
@@ -180,17 +209,17 @@ Your video's resolution might not match your screen. FIT modes control how the v
 **1:1 Mode (Keyboard: `1`)**
 Shows actual pixels—no scaling. Great for pixel-perfect inspection. Press `1` again to toggle back to Fit mode.
 
-**Fit Mode (Keyboard: `4`)**
+**Fit Mode (Keyboard: `2`)**
 Scales video to fit screen while preserving aspect ratio. Black bars appear if needed. This is the default.
 
-**Width Mode (Keyboard: `2`)**
+**Width Mode (Keyboard: `3`)**
 Scales video to fill screen width. Height may exceed screen (you'll pan to see it all).
 
-**Height Mode (Keyboard: `3`)**
+**Height Mode (Keyboard: `4`)**
 Scales video to fill screen height. Width may exceed screen.
 
 **Fullscreen Mode (Keyboard: `5`)**
-Hides the toolbar, maximizes viewing area. Press `5` again to exit.
+Hides the toolbar, maximizes viewing area. Press `5` or `ESC` again to exit.
 
 **Reset Button**
 Returns to default Fit mode and resets zoom/pan.
@@ -249,9 +278,9 @@ Click to isolate individual color channels:
 - **B (Blue Channel):** See only blue information
 - **RGB (Full Color):** Back to normal view
 
-Use `R` `G` `B` keyboard keys to cycle RGB channels.
+**Keyboard Shortcut:**
 
-**Keyboard Shortcut:** Press `B` to toggle Blue channel isolation (useful for quick artifact checks).
+Use `R` `G` `B` keyboard keys to cycle RGB channels.
 
 **Why Use Channel Isolation:**
 AI generation artifacts often hide in individual channels. Compression issues, color banding, and encoding problems become visible when channels are isolated.
@@ -268,11 +297,8 @@ A circular display showing color distribution in your video. Each pixel's color 
 - Edges = Saturated colors
 - Specific Directions = Specific hues (Red at 0°, Yellow at 60°, Green at 120°, etc.)
 
-**The 4×4 Dot Grid:**
-Our vectorscope uses vibrant 4×4 pixel dots for clear visibility. Watch how the pattern changes as you scrub through frames.
-
 **Why Use Vectorscope:**
-Instantly see if your video has color casts, clipping, or unusual color distributions. Professional colorists use this for quality control.
+Instantly see if your video has color casts, clipping, or unusual color distributions.
 
 ---
 
@@ -310,20 +336,24 @@ When you generate multiple versions, you need to compare them side-by-side. Prev
 
 ### The Generations Dropup
 
-Click **Generations** to see all your cached runs. Each generation has:
-Also navigate them with up and down arrow keys. Then press END key to display it (same as clicking it, and above up arrow, close and easy for you).
+Click **Generations** to see all your cached runs.
+Also navigate them with up and down arrow keys. Then press END key to display the selected one, same as clicking it.
 - A timestamp (when it was created)
-- A prefix (`v_` for video, `i_` for images)
+- A prefix (`v_` for video, `i_` for images), what´s node input belongs to, images or video
 - A comparison button (small square on the right)
 
 **Loading a Generation:**
 Press Enter to deploy generations menu or click the Generations button in the main bar. Click any generation name to load it into the viewer.
 
 **Renaming:**
-While a generation is selected, press Enter to rename, then press Enter again to confirm.
+While a generation is selected, press Enter again to rename, then press Enter again to confirm.
 
 **Deleting:**
 Middle mouse wheel click over a generation, confirm. The generation is removed from disk.
+
+**At the moment of this release, the Generations dropup has a visible max of 10 gens.**
+**If more are created they will acttually "be there" but you have to move with the UP and DOWN arrows to "slide/move" the menu vertically and scrub them in.**
+**We will add the mouse wheel in the next version of PVM to make this more intuitive.**
 
 ---
 
@@ -393,7 +423,7 @@ Every time you queue your ComfyUI workflow, PreviewVideoMonitorPro:
 1. Decodes your video/images
 2. Caches all frames in RAM (for instant playback)
 3. Saves frames to disk as JPEG sequence (for later reload)
-4. Registers the generation in the dropdown
+4. Registers the generation in the Generations dropup
 
 **Why Cache to RAM:**
 Reading frames from RAM is 100-1000x faster than decoding from disk. This enables:
@@ -403,7 +433,7 @@ Reading frames from RAM is 100-1000x faster than decoding from disk. This enable
 - Lag-free comparison modes
 
 **The Trade-Off:**
-RAM usage! A 1000-frame 1080p video uses ~6GB RAM. Load 5 generations = 30GB RAM.
+RAM usage! Just keep an eye on free RAM if you are working with hi-res video and a lot of generations.
 
 ---
 
@@ -414,15 +444,17 @@ RAM usage! A 1000-frame 1080p video uses ~6GB RAM. Load 5 generations = 30GB RAM
 **RAM Cache (Fast, Temporary)**
 - Decoded frames in memory
 - Used for instant playback
-- Cleared when you close monitor or load different generation
-
+- Cleared when you close monitor
+- 
 **Disk Cache (Slow, Persistent)**
 - JPEG sequences saved in `runs_cache` folder
 - Survives closing ComfyUI
-- Can reload quickly (JPEGs decode fast!)
+- Can reload quickly (JPEGs decode fast!) loads into RAM again when displayed
 
 **Normal Workflow:**
 Generate → Loads to RAM + saves to disk → You review → Close monitor → RAM cleared, disk remains → Open monitor later → Reloads from disk to RAM
+
+We use an advanced content detection system that prevents a Generation about to enter the node´s inputs to be writen into cache if it already exists there.
 
 ---
 
@@ -432,7 +464,7 @@ Click **ClearCache** button to open options:
 
 **"Clear All Cache" (Current Option)**
 - Deletes all generation folders from disk
-- Clears RAM
+- Clears RAM (FUTURE VERSION - NOT READY)
 - Empties the Generations dropdown
 - Frees up disk space
 
@@ -440,7 +472,7 @@ Click **ClearCache** button to open options:
 Future versions will offer:
 - Clear RAM Only (keep files on disk, free memory)
 - RAM usage display (see how much memory you're using)
-- Automatic management (smart cleanup when RAM is full)
+- Automatic management (smart cleanup when RAM is full - selected by user)
 
 **For Now:**
 Manage your generations manually—delete old ones you don't need via the Generations dropdown.
@@ -450,7 +482,10 @@ Manage your generations manually—delete old ones you don't need via the Genera
 ### Snapshots: Saving Your Workflow
 
 **What Is Snapshot:**
-Captures your current ComfyUI workflow and saves it alongside your generation in a WebP file. Think of it as version control for your prompts and settings.
+Captures your current ComfyUI workflow and saves it alongside your generation in a WebP file/image. Think of it as version control for your prompts and settings.
+If node it set to "smart" in "snapshot_path", snaps go to \custom_nodes\PreviewVideoMonitorPro\snapshots
+If node it set to "your custom path" in "snapshot_path", snaps go to that path
+Type "smart" again and the node will automatically know you´re sending to \custom_nodes\PreviewVideoMonitorPro\snapshots
 
 **How It Works:**
 1. Enabled by default (`snapshot_workflow: true` in node)
@@ -467,12 +502,13 @@ Opens a menu to manage saved workflows
 ```
 Shift+Q
 ```
-
-Close monitor window and exit the tool. Then you might want to set `power_state` to Off in the node to completely stop the tool and clear RAM usage.
+Closes monitor window and exit the tool (and it´s Windows/Pygame process).
+Not technically necessary to set `power_state` to Off unless you want to continue doing stuff in ComfyUI running promps and not want them to trigger PVM to re-open
+Also you need `power_state` before you change to a different physical display.
 
 ---
 
-## Advanced Notes: For Technical Directors, Pipeline Managers and Developers
+## Advanced Notes: For Technical Directors, Pipeline Managers, Developers and Coders in general.
 
 ### Pipeline Integration
 

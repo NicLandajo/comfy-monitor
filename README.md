@@ -6,7 +6,7 @@
 
 CrateTools PreviewVideoMonitorPro is a ComfyUI custom node for video preview on multiple physical monitors.
 
-Select any secondary display to instantly preview video and image batches with a full generation tracking system — save, rename, compare, and snapshot your outputs.
+Select any secondary display to instantly preview videos, image sequences and single images with a full generation tracking system — save, rename, compare, and snapshot your outputs.
 
 Includes professional Vision tools for technical inspection.
 #

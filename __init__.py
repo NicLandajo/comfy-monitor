@@ -2425,6 +2425,8 @@ class PreviewVideoMonitorPro:
         Resolve snapshot path from user input.
         - "smart" → default snapshots directory
         - Custom path → path/snapshots/ (auto-created)
+        
+        Security: Uses path containment check to ensure paths are within allowed directories.
         """
         try:
             # Check if user wants default "smart" path
@@ -2439,14 +2441,52 @@ class PreviewVideoMonitorPro:
             # Remove trailing separators
             normalized_path = normalized_path.rstrip(os.sep)
             
+            # Convert to absolute path and resolve any .. or . components
+            normalized_path = os.path.abspath(os.path.realpath(normalized_path))
+            
             # Add "snapshots" subdirectory
             snapshots_path = os.path.join(normalized_path, "snapshots")
+            
+            # Security check: Ensure the path is within allowed locations
+            # Allowed: user-specified directory or the default BASE_DIR
+            # This prevents path traversal attacks (e.g., ../../etc/passwd)
+            allowed_roots = [
+                os.path.abspath(os.path.realpath(normalized_path)),
+                os.path.abspath(os.path.realpath(BASE_DIR))
+            ]
+            
+            resolved_snapshots = os.path.abspath(os.path.realpath(snapshots_path))
+            
+            # Check path containment using os.path.commonpath
+            is_safe = False
+            for allowed_root in allowed_roots:
+                try:
+                    common = os.path.commonpath([resolved_snapshots, allowed_root])
+                    if common == allowed_root:
+                        is_safe = True
+                        break
+                except ValueError:
+                    # commonpath raises ValueError if paths are on different drives (Windows)
+                    continue
+            
+            if not is_safe:
+                raise Exception(f"Path '{snapshots_path}' is outside allowed directories")
             
             # Try to create the directory
             os.makedirs(snapshots_path, exist_ok=True)
             
-            # Verify it's writable
+            # Verify it's writable with path containment check
             test_file = os.path.join(snapshots_path, ".write_test")
+            test_file_resolved = os.path.abspath(os.path.realpath(test_file))
+            
+            # Ensure test file is within the snapshots directory
+            try:
+                common = os.path.commonpath([test_file_resolved, resolved_snapshots])
+                if common != resolved_snapshots:
+                    raise Exception("Test file path outside snapshots directory")
+            except ValueError:
+                raise Exception("Test file path on different drive")
+            
             try:
                 with open(test_file, 'w') as f:
                     f.write("test")

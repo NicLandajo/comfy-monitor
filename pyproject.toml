@@ -3,8 +3,12 @@ name = "comfyui-preview-video-monitor"
 version = "5.2.0"
 description = "Second monitor preview for video generations with interactive playback controls, color tools, generation tracking, and workflow-embedded snapshots."
 license = { text = "MIT" }
-```
+dependencies = ["pygame", "screeninfo", "opencv-python", "pillow"]
 
-**Step 5:** Commit message:
-```
-Add pyproject.toml for version info
+[project.urls]
+Repository = "https://github.com/CrateTools/comfyui-preview-video-monitor"
+
+[tool.comfy]
+PublisherId = "cratetools"
+DisplayName = "Preview Video Monitor Pro"
+Icon = ""
